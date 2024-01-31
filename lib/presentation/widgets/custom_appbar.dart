@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:search_address/flavors.dart';
+import 'package:app_cat/flavors.dart';
 
 class CustomAppBar extends PreferredSize {
   CustomAppBar({Key? key})

@@ -1,11 +1,11 @@
 import 'dart:io';
 
 import 'package:get/get.dart';
-import 'package:search_address/core/http/client_http.dart';
-import 'package:search_address/data/datasource/get_categories_datasources/get_categories_datasource_impl.dart';
-import 'package:search_address/data/repository_impl/get_categories_repository_impl/get_categories_repository_impl.dart';
-import 'package:search_address/domain/usecase/get_categories_usecases/get_categories_usecase_impl.dart';
-import 'package:search_address/presentation/pages/categories%20page/controller/categories_controller.dart';
+import 'package:app_cat/core/http/client_http.dart';
+import 'package:app_cat/data/datasource/get_categories_datasources/get_categories_datasource_impl.dart';
+import 'package:app_cat/data/repository_impl/get_categories_repository_impl/get_categories_repository_impl.dart';
+import 'package:app_cat/domain/usecase/get_categories_usecases/get_categories_usecase_impl.dart';
+import 'package:app_cat/presentation/pages/categories%20page/controller/categories_controller.dart';
 
 class CategoriesBinding extends Bindings {
   @override

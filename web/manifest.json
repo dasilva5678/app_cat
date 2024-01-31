@@ -1,6 +1,6 @@
 {
-    "name": "search_address",
-    "short_name": "search_address",
+    "name": "app_cat",
+    "short_name": "app_cat",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

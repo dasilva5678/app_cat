@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:search_address/presentation/widgets/custom_button.dart';
+import 'package:get/get.dart';
+import 'package:app_cat/core/routes/named_routes.dart';
+import 'package:app_cat/presentation/widgets/custom_button.dart';
 
 class InitialPage extends StatelessWidget {
   const InitialPage({super.key});
@@ -54,7 +56,9 @@ class InitialPage extends StatelessWidget {
             fontSize: 18,
             fontWeight: FontWeight.w600,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Get.toNamed(PageRoutes.loginPage);
+          },
           maximumSize: const Size(double.infinity, 45),
           minimumSize: const Size(double.infinity, 40),
           backgroundColor: Colors.grey.shade200,
@@ -72,7 +76,9 @@ class InitialPage extends StatelessWidget {
             fontSize: 18,
             fontWeight: FontWeight.w600,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Get.toNamed(PageRoutes.registerPage);
+          },
           maximumSize: const Size(double.infinity, 45),
           minimumSize: const Size(double.infinity, 40),
           backgroundColor: Colors.grey.shade200,

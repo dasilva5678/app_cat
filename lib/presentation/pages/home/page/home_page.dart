@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:search_address/presentation/pages/categories%20page/controller/categories_controller.dart';
+import 'package:app_cat/presentation/pages/categories%20page/controller/categories_controller.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -12,13 +12,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  CategoriesController categoriesController = Get.find<CategoriesController>();
+  // CategoriesController categoriesController = Get.find<CategoriesController>();
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    categoriesController.getAllCategories();
+    // categoriesController.getAllCategories();
   }
 
   @override

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:search_address/core/componets/background_image.dart';
+import 'package:app_cat/core/componets/background_image.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
-import 'package:search_address/domain/models/weight_model.dart';
+import 'package:app_cat/domain/models/weight_model.dart';
 
 class BreedsModel {
   WeightModel? weight;

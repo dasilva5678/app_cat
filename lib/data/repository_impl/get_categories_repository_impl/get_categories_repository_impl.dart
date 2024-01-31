@@ -1,9 +1,9 @@
 
 import 'package:dartz/dartz.dart';
-import 'package:search_address/core/errors/failure/failures.dart';
-import 'package:search_address/data/datasource/get_categories_datasources/get_categories_datasource.dart';
-import 'package:search_address/domain/models/categories_model.dart';
-import 'package:search_address/domain/repository/get_categories_repository/get_categories_repository.dart';
+import 'package:app_cat/core/errors/failure/failures.dart';
+import 'package:app_cat/data/datasource/get_categories_datasources/get_categories_datasource.dart';
+import 'package:app_cat/domain/models/categories_model.dart';
+import 'package:app_cat/domain/repository/get_categories_repository/get_categories_repository.dart';
 
 class GetCategoriesRepositoryImpl implements GetCategoriesRepository {
   final GetCategoriesDataSource _datasource;

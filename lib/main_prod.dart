@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:search_address/core/routes/named_routes.dart';
+import 'package:app_cat/core/routes/named_routes.dart';
 
 import 'flavors.dart';
 

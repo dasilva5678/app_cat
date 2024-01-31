@@ -1,8 +1,8 @@
 
 import 'package:dartz/dartz.dart';
-import 'package:search_address/domain/models/categories_model.dart';
-import 'package:search_address/domain/repository/get_categories_repository/get_categories_repository.dart';
-import 'package:search_address/domain/usecase/get_categories_usecases/get_categories_usecase.dart';
+import 'package:app_cat/domain/models/categories_model.dart';
+import 'package:app_cat/domain/repository/get_categories_repository/get_categories_repository.dart';
+import 'package:app_cat/domain/usecase/get_categories_usecases/get_categories_usecase.dart';
 
 import '../../../core/errors/failure/failures.dart';
 

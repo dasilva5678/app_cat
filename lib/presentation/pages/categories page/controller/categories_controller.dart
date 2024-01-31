@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:search_address/domain/models/categories_model.dart';
-import 'package:search_address/domain/usecase/get_categories_usecases/get_categories_usecase.dart';
+import 'package:app_cat/domain/models/categories_model.dart';
+import 'package:app_cat/domain/usecase/get_categories_usecases/get_categories_usecase.dart';
 
 class CategoriesController extends GetxController {
   final GetCategoriesUsecase _getCategoriesUsecase;

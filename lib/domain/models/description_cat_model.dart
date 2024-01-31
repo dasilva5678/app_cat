@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
-import 'package:search_address/domain/models/breeds_model.dart';
+import 'package:app_cat/domain/models/breeds_model.dart';
 
 class DescriptionCat {
   List<BreedsModel>? breeds;

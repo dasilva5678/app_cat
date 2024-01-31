@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 
-import 'package:search_address/domain/models/categories_model.dart';
+import 'package:app_cat/domain/models/categories_model.dart';
 
 import '../../../core/errors/failure/failures.dart';
 

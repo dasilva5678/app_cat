@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-import 'package:search_address/core/http/client_http.dart';
-import 'package:search_address/core/routes/base_url.dart';
-import 'package:search_address/data/datasource/breeds_datasources/breeds_datasources.dart';
-import 'package:search_address/domain/models/breeds_model.dart';
+import 'package:app_cat/core/http/client_http.dart';
+import 'package:app_cat/core/routes/base_url.dart';
+import 'package:app_cat/data/datasource/breeds_datasources/breeds_datasources.dart';
+import 'package:app_cat/domain/models/breeds_model.dart';
 
 class GetCategoriesDataSourceImpl implements BreedsDataSource {
   final ClientHttp client;
