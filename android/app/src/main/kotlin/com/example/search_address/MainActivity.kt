@@ -1,4 +1,4 @@
-package com.example.search_address
+package com.example.app_cat
 
 import io.flutter.embedding.android.FlutterActivity
 
