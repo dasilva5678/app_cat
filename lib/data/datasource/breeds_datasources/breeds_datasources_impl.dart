@@ -12,7 +12,7 @@ class GetCategoriesDataSourceImpl implements BreedsDataSource {
   @override
   Future<List<BreedsModel>> call() async {
     final response = await client.get(
-      url: PageRoutes.baseUrl,
+      url: Routes.baseUrl,
       headers: {
         "Accept": 'application/json',
         "Content-Type": 'application/json',
