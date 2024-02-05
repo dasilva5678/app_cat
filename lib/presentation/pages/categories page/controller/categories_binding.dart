@@ -1,11 +1,9 @@
-import 'dart:io';
-
-import 'package:get/get.dart';
 import 'package:app_cat/core/http/client_http.dart';
-import 'package:app_cat/data/datasource/get_categories_datasources/get_categories_datasource_impl.dart';
-import 'package:app_cat/data/repository_impl/get_categories_repository_impl/get_categories_repository_impl.dart';
-import 'package:app_cat/domain/usecase/get_categories_usecases/get_categories_usecase_impl.dart';
-import 'package:app_cat/presentation/pages/categories%20page/controller/categories_controller.dart';
+import 'package:app_cat/data/datasource/description_cat_datasources/description_cat_datasources_impl.dart';
+import 'package:app_cat/data/repository_impl/description_cat_repository_impl/description_cat_repository_impl.dart';
+import 'package:app_cat/domain/usecase/description_cat_usecases/description_cat_impl.dart';
+import 'package:app_cat/presentation/pages/categories%20page/controller/description_cats_controller.dart';
+import 'package:get/get.dart';
 
 class CategoriesBinding extends Bindings {
   @override
@@ -15,20 +13,20 @@ class CategoriesBinding extends Bindings {
 //SELECIONAR CATEGORIAS
     ///Datasource
     Get.lazyPut(
-        () => GetCategoriesDataSourceImpl(client: Get.find<ClientHttp>()));
+        () => DescriptionCatDataSourceImpl(client: Get.find<ClientHttp>()));
 //Repository
     Get.lazyPut(() =>
-        GetCategoriesRepositoryImpl(Get.find<GetCategoriesDataSourceImpl>()));
+        DescriptionCatRepositoryImpl(Get.find<DescriptionCatDataSourceImpl>()));
 //Usecase
     Get.lazyPut(() =>
-        GetCategoriesUsecaseImpl(Get.find<GetCategoriesRepositoryImpl>()));
+        DescriptionCatUsecaseImpl(Get.find<DescriptionCatRepositoryImpl>()));
 //Datasource
     Get.lazyPut(
-        () => GetCategoriesDataSourceImpl(client: Get.find<ClientHttp>()));
+        () => DescriptionCatDataSourceImpl(client: Get.find<ClientHttp>()));
 
     Get.put(
-      CategoriesController(
-        Get.find<GetCategoriesUsecaseImpl>(),
+      DescriptionCatsController(
+        Get.find<DescriptionCatUsecaseImpl>(),
       ),
       permanent: true,
     );

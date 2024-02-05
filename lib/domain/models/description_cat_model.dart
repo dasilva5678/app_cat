@@ -7,18 +7,18 @@ class DescriptionCat {
   List<BreedsModel>? breeds;
   String? id;
   String? url;
-  int? width;
-  int? height;
+  dynamic? width;
+  dynamic? height;
 
   DescriptionCat({this.breeds, this.id, this.url, this.width, this.height});
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
-      'breeds': breeds!.map((e) => null).toList(),
-      'id': id,
-      'url': url,
-      'width': width,
-      'height': height,
+      'breeds': breeds != null ? breeds!.map((x) => x.toMap()).toList() : null,
+      'id': id != null ? id : null,
+      'url': url != null ? url : null,
+      'width': width != null ? width : null,
+      'height': height != null ? height : null,
     };
   }
 
@@ -30,11 +30,11 @@ class DescriptionCat {
                 (x) => BreedsModel.fromMap(x as Map<String, dynamic>),
               ),
             )
-          : null,
+          : [],
       id: map['id'] != null ? map['id'] as String : null,
       url: map['url'] != null ? map['url'] as String : null,
-      width: map['width'] != null ? map['width'] as int : null,
-      height: map['height'] != null ? map['height'] as int : null,
+      width: map['width'] != null ? map['width'] as dynamic : null,
+      height: map['height'] != null ? map['height'] as dynamic : null,
     );
   }
 

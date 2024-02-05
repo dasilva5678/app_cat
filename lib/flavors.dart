@@ -35,7 +35,7 @@ class FlavorManager {
   static Color get color {
     switch (appFlavor) {
       case Flavor.hom:
-        return Color(Colors.pink.shade100.value);
+        return Color(Colors.grey.shade300.value);
       case Flavor.prod:
         return Color(Colors.pink.shade900.value);
       default:

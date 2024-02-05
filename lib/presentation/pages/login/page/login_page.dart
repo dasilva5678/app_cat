@@ -51,26 +51,27 @@ class LoginPage extends StatelessWidget {
       ],
     );
   }
-  Widget button(){
-    return  CustomButton(
-          title: "Entrar",
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.w600,
-          ),
-          onPressed: () {
-            Get.toNamed(PageRoutes.loginPage);
-          },
-          maximumSize: const Size(double.infinity, 45),
-          minimumSize: const Size(double.infinity, 40),
-          backgroundColor: Colors.grey.shade200,
-          borderRadius: 20,
-          image: SvgPicture.asset(
-            "assets/images/pata.svg",
-            width: 20,
-            height: 20,
-            color: Colors.grey.shade800,
-          ),
-        );
+
+  Widget button() {
+    return CustomButton(
+      title: "Entrar",
+      style: TextStyle(
+        fontSize: 18,
+        fontWeight: FontWeight.w600,
+      ),
+      onPressed: () {
+        Get.toNamed(PageRoutes.homePage);
+      },
+      maximumSize: const Size(double.infinity, 45),
+      minimumSize: const Size(double.infinity, 40),
+      backgroundColor: Colors.grey.shade200,
+      borderRadius: 20,
+      image: SvgPicture.asset(
+        "assets/images/pata.svg",
+        width: 20,
+        height: 20,
+        color: Colors.grey.shade800,
+      ),
+    );
   }
 }

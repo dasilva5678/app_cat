@@ -1,3 +1,4 @@
+import 'package:app_cat/presentation/pages/categories%20page/controller/categories_binding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -8,7 +9,7 @@ final GlobalKey<NavigatorState> navigatorKeyy = GlobalKey<NavigatorState>();
 void main() async {
   FlavorManager.appFlavor = Flavor.hom;
   WidgetsFlutterBinding.ensureInitialized();
-
+  CategoriesBinding().dependencies();
   runApp(const App());
 }
 

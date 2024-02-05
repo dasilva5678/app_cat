@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:app_cat/presentation/pages/categories%20page/controller/categories_controller.dart';
+import 'package:app_cat/presentation/pages/categories%20page/controller/description_cats_controller.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -12,13 +12,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  // CategoriesController categoriesController = Get.find<CategoriesController>();
+  DescriptionCatsController descriptionCatsController =
+      Get.find<DescriptionCatsController>();
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    // categoriesController.getAllCategories();
+    descriptionCatsController.getDescriptionCat(1, 20);
   }
 
   @override
@@ -27,21 +27,23 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget body() {
-    return GetBuilder<CategoriesController>(builder: (controller) {
-      return controller.categories.isNotEmpty
-          ? ListView.builder(
-              shrinkWrap: true,
-              physics: const BouncingScrollPhysics(),
-              itemCount: controller.categories.length,
-              itemBuilder: (context, index) {
-                var indexList = controller.categories[index];
-                return Container(
-                  child: Text('Item ${indexList.name ?? ''}'),
-                );
-              })
-          : const Center(
-              child: CircularProgressIndicator(),
-            );
+    return GetBuilder<DescriptionCatsController>(builder: (controller) {
+      return SafeArea(
+        child: descriptionCatsController.descriptionCatList.isNotEmpty
+            ? ListView.builder(
+                shrinkWrap: true,
+                physics: const BouncingScrollPhysics(),
+                itemCount: controller.descriptionCatList.length,
+                itemBuilder: (context, index) {
+                  var indexList = controller.descriptionCatList[index].breeds!;
+                  return Container(
+                    child: Text('Item ${indexList.map((e) => e.name)}'),
+                  );
+                })
+            : const Center(
+                child: CircularProgressIndicator(),
+              ),
+      );
     });
   }
 }

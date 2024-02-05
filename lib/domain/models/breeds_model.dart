@@ -13,30 +13,30 @@ class BreedsModel {
   String? countryCode;
   String? description;
   String? lifeSpan;
-  int? indoor;
-  int? lap;
+  dynamic indoor;
+  dynamic lap;
   String? altNames;
-  int? adaptability;
-  int? affectionLevel;
-  int? childFriendly;
-  int? dogFriendly;
-  int? energyLevel;
-  int? grooming;
-  int? healthIssues;
-  int? intelligence;
-  int? sheddingLevel;
-  int? socialNeeds;
-  int? strangerFriendly;
-  int? vocalisation;
-  int? experimental;
-  int? hairless;
-  int? natural;
-  int? rare;
-  int? rex;
-  int? suppressedTail;
-  int? shortLegs;
+  dynamic adaptability;
+  dynamic affectionLevel;
+  dynamic childFriendly;
+  dynamic dogFriendly;
+  dynamic energyLevel;
+  dynamic grooming;
+  dynamic healthIssues;
+  dynamic dynamicelligence;
+  dynamic sheddingLevel;
+  dynamic socialNeeds;
+  dynamic strangerFriendly;
+  dynamic vocalisation;
+  dynamic experimental;
+  dynamic hairless;
+  dynamic natural;
+  dynamic rare;
+  dynamic rex;
+  dynamic suppressedTail;
+  dynamic shortLegs;
   String? wikipediaUrl;
-  int? hypoallergenic;
+  dynamic hypoallergenic;
   String? referenceImageId;
 
   BreedsModel({
@@ -59,7 +59,7 @@ class BreedsModel {
     this.energyLevel,
     this.grooming,
     this.healthIssues,
-    this.intelligence,
+    this.dynamicelligence,
     this.sheddingLevel,
     this.socialNeeds,
     this.strangerFriendly,
@@ -97,7 +97,7 @@ class BreedsModel {
       'energyLevel': energyLevel,
       'grooming': grooming,
       'healthIssues': healthIssues,
-      'intelligence': intelligence,
+      'dynamicelligence': dynamicelligence,
       'sheddingLevel': sheddingLevel,
       'socialNeeds': socialNeeds,
       'strangerFriendly': strangerFriendly,
@@ -126,30 +126,30 @@ class BreedsModel {
       countryCode: map['countryCode'] != null ? map['countryCode'] as String : null,
       description: map['description'] != null ? map['description'] as String : null,
       lifeSpan: map['lifeSpan'] != null ? map['lifeSpan'] as String : null,
-      indoor: map['indoor'] != null ? map['indoor'] as int : null,
-      lap: map['lap'] != null ? map['lap'] as int : null,
+      indoor: map['indoor'] != null ? map['indoor'] as dynamic : null,
+      lap: map['lap'] != null ? map['lap'] as dynamic : null,
       altNames: map['altNames'] != null ? map['altNames'] as String : null,
-      adaptability: map['adaptability'] != null ? map['adaptability'] as int : null,
-      affectionLevel: map['affectionLevel'] != null ? map['affectionLevel'] as int : null,
-      childFriendly: map['childFriendly'] != null ? map['childFriendly'] as int : null,
-      dogFriendly: map['dogFriendly'] != null ? map['dogFriendly'] as int : null,
-      energyLevel: map['energyLevel'] != null ? map['energyLevel'] as int : null,
-      grooming: map['grooming'] != null ? map['grooming'] as int : null,
-      healthIssues: map['healthIssues'] != null ? map['healthIssues'] as int : null,
-      intelligence: map['intelligence'] != null ? map['intelligence'] as int : null,
-      sheddingLevel: map['sheddingLevel'] != null ? map['sheddingLevel'] as int : null,
-      socialNeeds: map['socialNeeds'] != null ? map['socialNeeds'] as int : null,
-      strangerFriendly: map['strangerFriendly'] != null ? map['strangerFriendly'] as int : null,
-      vocalisation: map['vocalisation'] != null ? map['vocalisation'] as int : null,
-      experimental: map['experimental'] != null ? map['experimental'] as int : null,
-      hairless: map['hairless'] != null ? map['hairless'] as int : null,
-      natural: map['natural'] != null ? map['natural'] as int : null,
-      rare: map['rare'] != null ? map['rare'] as int : null,
-      rex: map['rex'] != null ? map['rex'] as int : null,
-      suppressedTail: map['suppressedTail'] != null ? map['suppressedTail'] as int : null,
-      shortLegs: map['shortLegs'] != null ? map['shortLegs'] as int : null,
+      adaptability: map['adaptability'] != null ? map['adaptability'] as dynamic : null,
+      affectionLevel: map['affectionLevel'] != null ? map['affectionLevel'] as dynamic : null,
+      childFriendly: map['childFriendly'] != null ? map['childFriendly'] as dynamic : null,
+      dogFriendly: map['dogFriendly'] != null ? map['dogFriendly'] as dynamic : null,
+      energyLevel: map['energyLevel'] != null ? map['energyLevel'] as dynamic : null,
+      grooming: map['grooming'] != null ? map['grooming'] as dynamic : null,
+      healthIssues: map['healthIssues'] != null ? map['healthIssues'] as dynamic : null,
+      dynamicelligence: map['dynamicelligence'] != null ? map['dynamicelligence'] as dynamic : null,
+      sheddingLevel: map['sheddingLevel'] != null ? map['sheddingLevel'] as dynamic : null,
+      socialNeeds: map['socialNeeds'] != null ? map['socialNeeds'] as dynamic : null,
+      strangerFriendly: map['strangerFriendly'] != null ? map['strangerFriendly'] as dynamic : null,
+      vocalisation: map['vocalisation'] != null ? map['vocalisation'] as dynamic : null,
+      experimental: map['experimental'] != null ? map['experimental'] as dynamic : null,
+      hairless: map['hairless'] != null ? map['hairless'] as dynamic : null,
+      natural: map['natural'] != null ? map['natural'] as dynamic : null,
+      rare: map['rare'] != null ? map['rare'] as dynamic : null,
+      rex: map['rex'] != null ? map['rex'] as dynamic : null,
+      suppressedTail: map['suppressedTail'] != null ? map['suppressedTail'] as dynamic : null,
+      shortLegs: map['shortLegs'] != null ? map['shortLegs'] as dynamic : null,
       wikipediaUrl: map['wikipediaUrl'] != null ? map['wikipediaUrl'] as String : null,
-      hypoallergenic: map['hypoallergenic'] != null ? map['hypoallergenic'] as int : null,
+      hypoallergenic: map['hypoallergenic'] != null ? map['hypoallergenic'] as dynamic : null,
       referenceImageId: map['referenceImageId'] != null ? map['referenceImageId'] as String : null,
     );
   }
