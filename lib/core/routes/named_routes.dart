@@ -1,3 +1,4 @@
+import 'package:app_cat/presentation/pages/details%20cat/page/details_cat.dart';
 import 'package:get/get.dart';
 import 'package:app_cat/presentation/pages/initial%20page/page/initial_page.dart';
 import 'package:app_cat/presentation/pages/login/page/login_page.dart';
@@ -16,7 +17,6 @@ abstract class AppPages {
       page: () => LoginPage(),
       name: "/loginPage",
     ),
-   
     GetPage(
       page: () => InitialPage(),
       name: "/initialPage",
@@ -25,9 +25,13 @@ abstract class AppPages {
       page: () => RegisterPage(),
       name: "/registerPage",
     ),
-     GetPage(
+    GetPage(
       page: () => HomePage(),
       name: "/homePage",
+    ),
+    GetPage(
+      page: () => DetailsCat(),
+      name: "/",
     ),
   ];
 }
@@ -38,4 +42,5 @@ abstract class PageRoutes {
   static const String initialPage = "/initialPage";
   static const String registerPage = "/registerPage";
   static const String homePage = "/homePage";
+  static const String detailsCat = "/detailsCat";
 }

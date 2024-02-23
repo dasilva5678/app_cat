@@ -41,16 +41,13 @@ class CustomButton extends StatelessWidget {
             color: borderColor ?? Colors.transparent,
           ),
           animationDuration: Duration(seconds: 10),
-          // elevation: 2,
           backgroundColor: backgroundColor,
-          // alignment: Alignment.center,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius),
           ),
         ),
         child: FittedBox(
-          fit: BoxFit
-              .scaleDown, // Isso pode ajudar a reduzir o tamanho do ícone se necessário
+          fit: BoxFit.scaleDown,
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [

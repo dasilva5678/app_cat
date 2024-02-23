@@ -23,7 +23,7 @@ class BreedsModel {
   dynamic energyLevel;
   dynamic grooming;
   dynamic healthIssues;
-  dynamic dynamicelligence;
+  dynamic intelligence;
   dynamic sheddingLevel;
   dynamic socialNeeds;
   dynamic strangerFriendly;
@@ -59,7 +59,7 @@ class BreedsModel {
     this.energyLevel,
     this.grooming,
     this.healthIssues,
-    this.dynamicelligence,
+    this.intelligence,
     this.sheddingLevel,
     this.socialNeeds,
     this.strangerFriendly,
@@ -97,7 +97,7 @@ class BreedsModel {
       'energyLevel': energyLevel,
       'grooming': grooming,
       'healthIssues': healthIssues,
-      'dynamicelligence': dynamicelligence,
+      'dynamicelligence': intelligence,
       'sheddingLevel': sheddingLevel,
       'socialNeeds': socialNeeds,
       'strangerFriendly': strangerFriendly,
@@ -117,40 +117,70 @@ class BreedsModel {
 
   factory BreedsModel.fromMap(dynamic map) {
     return BreedsModel(
-      weight: map['weight'] != null ? WeightModel.fromMap(map['weight'] as Map<String,dynamic>) : null,
+      weight: map['weight'] != null
+          ? WeightModel.fromMap(map['weight'] as Map<String, dynamic>)
+          : null,
       id: map['id'] != null ? map['id'] as String : null,
       name: map['name'] != null ? map['name'] as String : null,
-      temperament: map['temperament'] != null ? map['temperament'] as String : null,
+      temperament:
+          map['temperament'] != null ? map['temperament'] as String : null,
       origin: map['origin'] != null ? map['origin'] as String : null,
-      countryCodes: map['countryCodes'] != null ? map['countryCodes'] as String : null,
-      countryCode: map['countryCode'] != null ? map['countryCode'] as String : null,
-      description: map['description'] != null ? map['description'] as String : null,
-      lifeSpan: map['lifeSpan'] != null ? map['lifeSpan'] as String : null,
+      countryCodes:
+          map['country_codes'] != null ? map['country_codes'] as String : null,
+      countryCode:
+          map['country_code'] != null ? map['country_code'] as String : null,
+      description:
+          map['description'] != null ? map['description'] as String : null,
+      lifeSpan: map['life_span'] != null ? map['life_span'] as String : null,
       indoor: map['indoor'] != null ? map['indoor'] as dynamic : null,
       lap: map['lap'] != null ? map['lap'] as dynamic : null,
-      altNames: map['altNames'] != null ? map['altNames'] as String : null,
-      adaptability: map['adaptability'] != null ? map['adaptability'] as dynamic : null,
-      affectionLevel: map['affectionLevel'] != null ? map['affectionLevel'] as dynamic : null,
-      childFriendly: map['childFriendly'] != null ? map['childFriendly'] as dynamic : null,
-      dogFriendly: map['dogFriendly'] != null ? map['dogFriendly'] as dynamic : null,
-      energyLevel: map['energyLevel'] != null ? map['energyLevel'] as dynamic : null,
+      altNames: map['alt_names'] != null ? map['alt_names'] as String : null,
+      adaptability:
+          map['adaptability'] != null ? map['adaptability'] as dynamic : null,
+      affectionLevel: map['affection_level'] != null
+          ? map['affection_level'] as dynamic
+          : null,
+      childFriendly: map['child_friendly'] != null
+          ? map['child_friendly'] as dynamic
+          : null,
+      dogFriendly:
+          map['dog_friendly'] != null ? map['dog_friendly'] as dynamic : null,
+      energyLevel:
+          map['energy_level'] != null ? map['energy_level'] as dynamic : null,
       grooming: map['grooming'] != null ? map['grooming'] as dynamic : null,
-      healthIssues: map['healthIssues'] != null ? map['healthIssues'] as dynamic : null,
-      dynamicelligence: map['dynamicelligence'] != null ? map['dynamicelligence'] as dynamic : null,
-      sheddingLevel: map['sheddingLevel'] != null ? map['sheddingLevel'] as dynamic : null,
-      socialNeeds: map['socialNeeds'] != null ? map['socialNeeds'] as dynamic : null,
-      strangerFriendly: map['strangerFriendly'] != null ? map['strangerFriendly'] as dynamic : null,
-      vocalisation: map['vocalisation'] != null ? map['vocalisation'] as dynamic : null,
-      experimental: map['experimental'] != null ? map['experimental'] as dynamic : null,
+      healthIssues:
+          map['health_issues'] != null ? map['health_issues'] as dynamic : null,
+      intelligence:
+          map['intelligence'] != null ? map['intelligence'] as dynamic : null,
+      sheddingLevel: map['shedding_level'] != null
+          ? map['shedding_level'] as dynamic
+          : null,
+      socialNeeds:
+          map['social_needs'] != null ? map['social_needs'] as dynamic : null,
+      strangerFriendly: map['stranger_friendly'] != null
+          ? map['stranger_friendly'] as dynamic
+          : null,
+      vocalisation:
+          map['vocalisation'] != null ? map['vocalisation'] as dynamic : null,
+      experimental:
+          map['experimental'] != null ? map['experimental'] as dynamic : null,
       hairless: map['hairless'] != null ? map['hairless'] as dynamic : null,
       natural: map['natural'] != null ? map['natural'] as dynamic : null,
       rare: map['rare'] != null ? map['rare'] as dynamic : null,
       rex: map['rex'] != null ? map['rex'] as dynamic : null,
-      suppressedTail: map['suppressedTail'] != null ? map['suppressedTail'] as dynamic : null,
-      shortLegs: map['shortLegs'] != null ? map['shortLegs'] as dynamic : null,
-      wikipediaUrl: map['wikipediaUrl'] != null ? map['wikipediaUrl'] as String : null,
-      hypoallergenic: map['hypoallergenic'] != null ? map['hypoallergenic'] as dynamic : null,
-      referenceImageId: map['referenceImageId'] != null ? map['referenceImageId'] as String : null,
+      suppressedTail: map['suppressed_tail'] != null
+          ? map['suppressed_tail'] as dynamic
+          : null,
+      shortLegs:
+          map['short_legs'] != null ? map['short_legs'] as dynamic : null,
+      wikipediaUrl:
+          map['wikipedia_url'] != null ? map['wikipedia_url'] as String : null,
+      hypoallergenic: map['hypoallergenic'] != null
+          ? map['hypoallergenic'] as dynamic
+          : null,
+      referenceImageId: map['reference_image_id'] != null
+          ? map['reference_image_id'] as String
+          : null,
     );
   }
 

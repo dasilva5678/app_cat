@@ -51,7 +51,7 @@ class InitialPage extends StatelessWidget {
     return Column(
       children: [
         CustomButton(
-          title: "Logar",
+          title: "Login",
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w600,
@@ -70,8 +70,11 @@ class InitialPage extends StatelessWidget {
             color: Colors.grey.shade800,
           ),
         ),
+        SizedBox(
+          height: 20,
+        ),
         CustomButton(
-          title: "Cadastrar",
+          title: "Register",
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w600,

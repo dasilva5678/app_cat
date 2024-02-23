@@ -293,7 +293,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
   Widget button() {
     return CustomButton(
-      title: "Cadastrar",
+      title: "Register",
       style: TextStyle(
         fontSize: 18,
         fontWeight: FontWeight.w600,

@@ -1,11 +1,15 @@
+import 'package:app_cat/core/styles/app_color.dart';
+
+import 'package:app_cat/presentation/pages/home/widgets/card_breeds.dart';
+import 'package:app_cat/presentation/widgets/custom_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:app_cat/presentation/pages/categories%20page/controller/description_cats_controller.dart';
+import 'package:app_cat/presentation/pages/home/controller/description_cats_controller.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
-    super.key,
-  });
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -18,32 +22,59 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    descriptionCatsController.getDescriptionCat(1, 20);
+    getDescriptionCat();
+  }
+
+  void getDescriptionCat() {
+    descriptionCatsController.isLoading = true;
+    descriptionCatsController
+        .getDescriptionCat(1, 20)
+        .then((value) => descriptionCatsController.isLoading = false);
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: body());
+    return Scaffold(
+      appBar: CustomAppBar(
+        title: Text(
+          'Breeds Cat',
+          style: TextStyle(
+            color: AppColors.lead,
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+      body: body(),
+    );
   }
 
   Widget body() {
-    return GetBuilder<DescriptionCatsController>(builder: (controller) {
-      return SafeArea(
-        child: descriptionCatsController.descriptionCatList.isNotEmpty
-            ? ListView.builder(
-                shrinkWrap: true,
-                physics: const BouncingScrollPhysics(),
-                itemCount: controller.descriptionCatList.length,
-                itemBuilder: (context, index) {
-                  var indexList = controller.descriptionCatList[index].breeds!;
-                  return Container(
-                    child: Text('Item ${indexList.map((e) => e.name)}'),
+    return GetBuilder<DescriptionCatsController>(
+      builder: (controller) {
+        return controller.isLoading
+            ? Center(child: CircularProgressIndicator())
+            : controller.breedsList.isEmpty
+                ? Center(child: Text('Nenhum dado disponível'))
+                : SafeArea(
+                    child: SingleChildScrollView(
+                      child: ListView.builder(
+                        shrinkWrap: true,
+                        physics: NeverScrollableScrollPhysics(),
+                        itemCount: controller.breedsList.length,
+                        itemBuilder: (context, index) {
+                          var breeds = controller.breedsList[index];
+                          var description =
+                              controller.descriptionCatList[index];
+                          return CardBreeds(
+                            description: description,
+                            breeds: breeds,
+                          );
+                        },
+                      ),
+                    ),
                   );
-                })
-            : const Center(
-                child: CircularProgressIndicator(),
-              ),
-      );
-    });
+      },
+    );
   }
 }

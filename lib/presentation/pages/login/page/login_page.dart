@@ -41,7 +41,7 @@ class LoginPage extends StatelessWidget {
           inputHeight: 50,
         ),
         SizedBox(
-          height: 10,
+          height: 30,
         ),
         CustomTextForm(
           hintText: "Senha",
@@ -54,7 +54,7 @@ class LoginPage extends StatelessWidget {
 
   Widget button() {
     return CustomButton(
-      title: "Entrar",
+      title: "Login",
       style: TextStyle(
         fontSize: 18,
         fontWeight: FontWeight.w600,

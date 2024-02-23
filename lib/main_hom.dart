@@ -1,4 +1,4 @@
-import 'package:app_cat/presentation/pages/categories%20page/controller/categories_binding.dart';
+import 'package:app_cat/presentation/pages/home/controller/description_binding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -9,7 +9,7 @@ final GlobalKey<NavigatorState> navigatorKeyy = GlobalKey<NavigatorState>();
 void main() async {
   FlavorManager.appFlavor = Flavor.hom;
   WidgetsFlutterBinding.ensureInitialized();
-  CategoriesBinding().dependencies();
+  DescriptionCatsBinding().dependencies();
   runApp(const App());
 }
 
@@ -34,10 +34,7 @@ class _AppState extends State<App> {
       child: GetMaterialApp(
         title: 'Cat App HML',
         theme: ThemeData(
-          fontFamily: 'Segoe-UI',
-          primaryColor: Colors.pinkAccent,
-          scaffoldBackgroundColor: Colors.white,
-          canvasColor: Colors.white,
+          fontFamily: 'Roboto-Black',
         ),
         debugShowCheckedModeBanner: false,
         initialRoute: PageRoutes.initialPage,
